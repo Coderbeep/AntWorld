@@ -3,26 +3,26 @@ package com.example.demo1;
 import javafx.scene.paint.Color;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Circle;
-enum AnthillType {
-    RED(Color.RED), BLUE(Color.BLUE);
-    private final Color color;
 
-    AnthillType(Color color) {
-        this.color = color;
+public class Anthill extends Spot {
+    public enum Type {
+        RED(Color.RED), BLUE(Color.BLUE);
+        private final Color color;
+
+        Type(Color color) {
+            this.color = color;
+        }
+
+        public Color getColor() {
+            return color;
+        }
     }
 
-    public Color getColor() {
-        return color;
-    }
-}
-
-public class Anthill extends Node {
-    public AnthillType type;
+    public Type type;
     public int radius = 25;
 
-    public Anthill(int x, int y, AnthillType type) {
-        this.setX(x);
-        this.setY(y);
+    public Anthill(int x, int y, Type type) {
+        super(x, y);
         this.type = type;
     }
 

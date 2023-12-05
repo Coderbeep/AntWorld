@@ -1,12 +1,10 @@
 package com.example.demo1;
 
-import javafx.scene.paint.Color;
 import javafx.scene.layout.Pane;
 
-abstract class Node {
+public abstract class Node {
     private int x = 0;
     private int y = 0;
-    public Color color = null;
     abstract public void drawOnPane(Pane pane);
 
     public int getX() { return x; }
